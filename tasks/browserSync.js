@@ -10,7 +10,7 @@ const reload = (done) => {
 const serve = (done) => {
     global.watch = true;
     server.init({
-        proxy: 'twig-starter.template',
+        proxy: 'localhost/myworld',
         notify: false
     });
     done();
