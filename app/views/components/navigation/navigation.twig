@@ -1,22 +1,17 @@
 {% import 'components/navigation/macros.twig' as nav %}
-<div class="nav__fixed">
-    <div class="nav" id="js-navigation">
-        <div class="nav__container container">
-            <div class="nav__row row">
-                {{
-                    nav.logo({
-                        "class": 'col-12 col-md-3',
-                        "logo": "#{path}/img/logo.png",
-                        "alt": title
-                    })
-                }}
-                {{
-                    nav.menu('col-12 col-md-6')
-                }}
-                {{
-                    nav.addition('2', 'col-12 col-md-3')
-                }}
+<nav class="nav" id="js-navigation">
+    <div class="nav__container container">
+        <div class="nav__row row">
+            <div class="nav__logo">
+                <img src="{{ path }}/img/logo.svg" alt="logo">
+            </div>
+            <div class="nav__addition">
+                <img src="{{ path }}/img/logo-top.png" class="nav__addition-logo" alt="logo top">
+                <div class="nav__addition-item">
+                    <p class="nav__addition-title">компания холдинга</p>
+                    <img src="{{ path }}/img/logo-mw.png" alt="logo mw" class="nav__addition-item-logo">
+                </div>
             </div>
         </div>
     </div>
-</div>
+</nav>

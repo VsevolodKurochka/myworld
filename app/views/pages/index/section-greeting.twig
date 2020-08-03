@@ -1,0 +1,27 @@
+{% import 'macros/landing.twig' as landing %}
+{% set logos = ['img/formula-1.png', 'img/walmart.png', 'img/mcdonalds.png', 'img/zara.png', 'img/ali.png', 'img/ikea.png', 'img/booking.png'] %}
+<section class="home-greeting">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-8">
+                <h1 class="home-greeting__title">
+                    Узнай, как получать
+                    <span>доход от товарооборота</span>
+                    таких компаний как:
+                </h1>
+                <div class="home-greeting__logos">
+                    {% for logo in logos %}
+                        {{ landing.image(logo, 'img/s') }}
+                    {% endfor %}
+                </div>
+                <div class="home-greeting__plus">
+                    <p>
+                        все <strong>автозаправки</strong> мира
+                        и другие <strong>150 000 компаний</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 visible-sm visible-md visible-lg"></div>
+        </div>
+    </div>
+</section>
