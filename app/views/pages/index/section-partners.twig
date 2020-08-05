@@ -1,0 +1,51 @@
+{% import 'macros/landing.twig' as landing %}
+{% set items = [
+  {
+    icon: {'blue-theme': 'img/partner-1.png','red-theme': '','green-theme': ''},
+    text: '<strong>Неограниченные<br>возможности</strong> получения<br>17 видов дохода'
+  },
+  {
+    icon: {'blue-theme': 'img/partner-2.png','red-theme': '','green-theme': ''},
+    text: 'Удобная <strong>система<br>учета бонусов</strong><br>и управления бизнесом'
+  },
+  {
+    icon: {'blue-theme': 'img/partner-3.png','red-theme': '','green-theme': ''},
+    text: 'Самая востребованная<br><strong>ниша рынка</strong> всех времен -<br>ежедневные покупки'
+  },
+  {
+    icon: {'blue-theme': 'img/partner-4.png','red-theme': '','green-theme': ''},
+    text: 'Более <strong>400 000 торговых<br>точек</strong> использования<br>картой лояльности'
+  },
+  {
+    icon: {'blue-theme': 'img/partner-5.png','red-theme': '','green-theme': ''},
+    text: 'Дополнительные <strong>скидки <br>и бонусы</strong> на покупку<br>в вышеуказанных компаниях '
+  },
+  {
+    icon: {'blue-theme': 'img/partner-6.png','red-theme': '','green-theme': ''},
+    text: 'Сервис сотрудничает<br>с более чем <strong>150 000<br>компаниями</strong> по всему Миру'
+  },
+  {
+    icon: {'blue-theme': 'img/partner-7.png','red-theme': '','green-theme': ''},
+    text: 'Свыше <strong>15 000 000<br>пользователей<br></strong>по всему Миру'
+  }
+] %}
+<section class="section home-partners">
+  <div class="container home-partners__container">
+    {% include 'components/circle.twig' with {theme: theme, class: 'home-partners__circle'} %}
+    <h2 class="section__title home-partners__title">
+      Предлагаем <strong>начать сотрудничество</strong><br>
+      с самого популярного проекта<br>
+      <span>Cashback World</span>
+    </h2>
+    <div class="home-partners__grid">
+      {% for item in items %}
+        <div class="home-partners__item">
+          <div class="home-partners__item-header">
+            {{ landing.image("#{item.icon[theme]}", 'item image', 'home-partners__item-image') }}
+          </div>
+          <p class="home-partners__item-title">{{ item.text|raw }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
