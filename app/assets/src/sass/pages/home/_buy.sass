@@ -1,7 +1,41 @@
 .home-buy
   &__content
     +r()
+    padding: 30px
+    color: $color-white
+    +min(md)
+      padding: 90px
+
   &__bg
     +a(0, 0)
     +size(100%)
     object-fit: cover
+    z-index: -1
+    border-radius: 6px
+
+  &__title
+    +fs(20px)
+    +lh(1.1)
+    +mb(20px)
+    &-highlight
+      color: $color-yellow
+    &-large
+      +fs(150%)
+      line-height: 1
+    +min(md)
+      +fs(35px)
+
+  &__subtitle
+    +r()
+    max-width: 450px
+    +fs(18px)
+    +pl(30px)
+
+    &-star
+      +a(0, null, null, 0)
+      +fs(200%)
+      +lh(1)
+
+    +min(md)
+      +fs(20px)
+      margin-left: 35%
