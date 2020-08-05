@@ -1,0 +1,23 @@
+.home-garant
+  &__grid
+    display: grid
+    grid-gap: 30px
+    +min(md)
+      grid-template-columns: repeat(3, 1fr)
+
+  &__title
+    br
+      display: none
+      +min(md)
+        display: block
+
+  &__item
+    color: #9db3dd
+    &-header
+      display: flex
+      align-self: center
+      height: 90px
+      +mb(20px)
+    &-image
+      max-height: 90px
+      max-width: 90px

@@ -1,0 +1,54 @@
+{% import 'macros/landing.twig' as landing %}
+{% set items = [
+    {
+        icon: {
+            'blue-theme': 'img/icon-1.svg',
+            'red-theme': '',
+            'green-theme': ''
+        },
+        text: 'На рынке с 2003 года<br>(страна основания: Австрия)'
+    },
+    {
+        icon: {
+            'blue-theme': 'img/icon-2.svg',
+            'red-theme': '',
+            'green-theme': ''
+        },
+        text: 'Представительство<br>в более чем 50 странах Мира'
+    },
+    {
+        icon: {
+            'blue-theme': 'img/icon-3.svg',
+            'red-theme': '',
+            'green-theme': ''
+        },
+        text: 'Возможность получения<br>пассивного дохода в более чем<br>140 проектах компании'
+    }
+] %}
+<section class="section home-garant">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title home-garant__title">
+                Гарантируй себе <strong>обеспеченную жизнь</strong><br>
+                и <strong>независимость</strong> от государтсва и кризиса.
+            </h2>
+            <p class="section__subtitle"><strong>Стань партнером</strong> компании <strong>Lyconet</strong></p>
+        </div>
+        <div class="home-garant__grid">
+            {% for item in items %}
+                <div class="home-garant__item">
+                    <div class="home-garant__item-header">
+                        {{ landing.image("#{item.icon[theme]}", 'item image', 'home-garant__item-image') }}
+                    </div>
+                    <p class="home-garant__item-title">{{ item.text|raw }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="section__footer">
+            <button
+                class="btn btn_theme"
+                data-action="modal"
+                data-open="#free-consultation">Получить <span>бесплатную</span> консультацию</button>
+        </div>
+    </div>
+</section>
