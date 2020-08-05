@@ -2,7 +2,7 @@
 {% set logos = ['img/formula-1.png', 'img/walmart.png', 'img/mcdonalds.png', 'img/zara.png', 'img/ali.png', 'img/ikea.png', 'img/booking.png'] %}
 <section class="home-greeting">
     <div class="container">
-        {{ landing.image(image, 'circle', 'home-greeting__circle') }}
+        {% include 'components/circle.twig' with {theme: theme, class: 'home-greeting__circle'} %}
         <div class="row home-greeting__row">
             <div class="col-12 col-sm-7">
                 <h1 class="home-greeting__title">
