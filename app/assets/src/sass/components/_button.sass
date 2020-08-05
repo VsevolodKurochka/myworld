@@ -2,43 +2,39 @@
 $btn-padding: 10px 16px
 $btn-font-size: 14px
 
-// Button large
-$btn-large-padding: 15px 25px
-$btn-large-font-size: 18px
-
-// Button border
-$btn-border-width: 3px
-$btn-border-style: solid
-
-//-
-//- Buttons variant
-//-
-
-// 1 key - background
-// 2 key - text color
-$btn-static: ("white": ($color-white, $color-brand-1), "brand-1": ($color-brand-1, $color-white), "brand-2": ($color-brand-2, $color-white))
-
-// 1 key - border-color
-// 2 key - text color
-$btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
-
 .btn
   +btn()
   +btn-size($btn-padding, $btn-font-size)
 
-  &-group &
-    margin: 5px
-
-  &_lg
-    +btn-size($btn-large-padding, $btn-large-font-size)
-
-  &_shadow
-    &-brand-1
-      +bs("0 3px 8px 1px transparentize($color-brand-1, 0.5)")
+  &_theme
+    border-radius: 6px
+    +fs(18px)
+    padding: 25px 20px
+    span
+      text-decoration: underline
+    +min(md)
+      padding: 25px 30px
+      font-size: 19px
+    .blue-theme &
+      background-image: linear-gradient( 90deg, rgb(255,151,81) 0%, rgb(255,198,0) 100%)
+      color: #292929
+      box-shadow: 0 7px 13px -2px #c0d6f6
 
     &:hover
-      +bs("none")
+      box-shadow: none
+      transform: translateY(3px)
 
-  +btn-static-iteration()
+  &_video
+    +size(60px)
+    &:before
+      content: ''
+      +a(50%, null, null, 50%)
+      transform: translate(-50%, -50%)
+      +size(16px)
+      +bgi('../img/play.svg')
 
-  +btn-border-iteration()
+    .blue-theme &
+      box-shadow: 0 9px 13px -3px transparentize(#000, 0.5)
+
+    +min(md)
+      +size(85px, 70px)

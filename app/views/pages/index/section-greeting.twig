@@ -2,8 +2,9 @@
 {% set logos = ['img/formula-1.png', 'img/walmart.png', 'img/mcdonalds.png', 'img/zara.png', 'img/ali.png', 'img/ikea.png', 'img/booking.png'] %}
 <section class="home-greeting">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-8">
+        {{ landing.image(image, 'circle', 'home-greeting__circle') }}
+        <div class="row home-greeting__row">
+            <div class="col-12 col-sm-7">
                 <h1 class="home-greeting__title">
                     Узнай, как получать
                     <span>доход от товарооборота</span>
@@ -16,12 +17,29 @@
                 </div>
                 <div class="home-greeting__plus">
                     <p>
-                        все <strong>автозаправки</strong> мира
+                        все <strong>автозаправки</strong> мира<br>
                         и другие <strong>150 000 компаний</strong>
                     </p>
                 </div>
+                <div class="home-greeting__button-outer">
+                    <button
+                            class="btn btn_theme"
+                            data-action="modal"
+                            data-open="#free-consultation">Получить <span>бесплатную</span> консультацию</button>
+                </div>
             </div>
-            <div class="col-12 col-sm-4 visible-sm visible-md visible-lg"></div>
+            <div class="col-12 col-sm-5 visible-sm visible-md visible-lg">
+                <div class="home-greeting__video">
+                    {{ landing.image(greetingVideo, 'Greeting video image', 'home-greeting__video-image') }}
+                    <div class="home-greeting__video-button-outer">
+                        <button
+                                class="btn btn_video btn_theme home-greeting__video-button"
+                                data-action="modal"
+                                data-video="https://www.youtube.com/embed/2pYKSk0x3Rg"
+                                data-open="#video"></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

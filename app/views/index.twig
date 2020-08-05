@@ -5,6 +5,7 @@
 {% set description = 'description' %}
 {% set image = 'img/logo.png' %}
 {% set url = 'url' %}
+{% set bodyClass = 'blue-theme' %}
 
 {% block meta %}
 {{ macros.meta(title, description, image, url) }}
@@ -19,7 +20,7 @@
 {% endblock %}
 
 {% block content %}
-{% include 'pages/index/section-greeting.twig' %}
+{% include 'pages/index/section-greeting.twig' with {image: 'img/circle.png', greetingVideo: 'img/greeting-video.png'} %}
 {% endblock %}
 
 {% block footer %}
