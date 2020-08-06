@@ -10,3 +10,19 @@
       grid-gap: 45px
 
   &__item
+    +min(md)
+      +fs(22px)
+    &-header
+      +r()
+      +fs(0)
+      +mb(10px)
+    &-name
+      +ff('b')
+      +mb(5px)
+
+    &-stars
+      display: flex
+      +a()
+      svg
+        margin-right: 5px
+        +size(20px)
