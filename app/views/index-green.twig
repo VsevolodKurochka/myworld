@@ -1,0 +1,32 @@
+{% import 'macros/base.twig' as macros %}
+{% extends 'layouts/mainLayout.twig' %}
+
+{% set title = 'BeLeaderClub' %}
+{% set description = 'Как получать доход от товарооборота компаний мировых брендов' %}
+{% set image = 'img/logo.png' %}
+{% set url = 'url' %}
+{% set bodyClass = 'green-theme' %}
+
+{% block meta %}
+{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+{{ macros.css("css/style.min.css") }}
+{% endblock %}
+
+{% block js %}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
+{% endblock %}
+
+{% block content %}
+{% include 'pages/index/section-greeting.twig' with {theme: bodyClass, greetingVideo: 'img/greeting-video-green.png'} %}
+{% include 'pages/index/section-buy.twig' with {image: 'img/buy-green.png'} %}
+{% include 'pages/index/section-garant.twig' with {theme: bodyClass} %}
+{% include 'pages/index/section-partners.twig' with {theme: bodyClass} %}
+{% include 'pages/index/section-first-month.twig' with {theme: bodyClass} %}
+{% include 'pages/index/section-teachers.twig' with {theme: bodyClass} %}
+{% include 'pages/index/section-connect.twig' with {theme: bodyClass} %}
+{% include 'pages/index/section-remember.twig' with {theme: bodyClass} %}
+{% endblock %}
