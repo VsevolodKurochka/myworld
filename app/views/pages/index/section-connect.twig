@@ -1,0 +1,42 @@
+{% import 'macros/landing.twig' as landing %}
+<section class="home-connect">
+  <div class="container home-connect__container">
+    {% include 'components/circle.twig' with {theme: theme, class: 'home-connect__circle'} %}
+    <div class="home-connect__grid">
+      <div class="home-connect__content">
+        <h2 class="section__title home-connect__title">
+          Почему мы знаем,<br>
+          что <strong>у тебя тоже<br>
+            получится?</strong>
+        </h2>
+        <div class="section__subtitle">
+          Команда <strong>BeLeader Club</strong><br>
+          и ее лидер  <strong>Ирина Бейнаровича</strong>
+          работают по уже проверенной
+          прибыльной стратегии не один год.
+          И мы предлагаем ее тебе.
+        </div>
+      </div>
+      <div class="home-connect__image-outer">
+        <div class="home-connect__image">
+          {{ landing.image('img/businessman-filter.png', 'businessman filter', 'home-connect__image-back') }}
+          {{ landing.image('img/businessman.png', 'businessman', 'home-connect__image-front') }}
+        </div>
+      </div>
+      <div class="home-connect__info">
+        <p class="home-connect__info-title">Присоединяйся в нашу<br>
+          команду и ты получишь: </p>
+        <ul class="home-connect__info-list">
+          <li>Полное обучение продажам<br>
+            и маркетингу с нуля</li>
+          <li>Своя уникальная IT-платформа,<br>
+            которая помогает автоматизировать<br>
+            все бизнес процессы</li>
+          <li>Командные встречи, поддержка,<br>
+            обучение и консультации<br>
+            в неформальной обстановке</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
