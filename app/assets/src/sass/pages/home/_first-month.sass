@@ -3,8 +3,10 @@
   background: linear-gradient(180deg, #eef6ff 50%, #fff 50%)
   &__content
     +r()
-    padding: 30px
+    padding: 15px
     z-index: 1
+    +min(sm)
+      padding: 30px
     +min(md)
       padding: 45px 60px
 
@@ -14,6 +16,8 @@
     object-fit: cover
     z-index: -1
     border-radius: 6px
+    +red-theme()
+      filter: grayscale(1)
 
   &__grid
     display: grid
@@ -40,6 +44,12 @@
       path
         +blue-theme
           fill: $color-yellow
+
+        +green-theme
+          fill: $color-yellow
+
+        +red-theme
+          fill: $color-red
 
   &__video
     +r()
