@@ -3,22 +3,35 @@
     +r()
     padding: 30px
     color: $color-white
+    z-index: 1
     +min(md)
       padding: 90px
+
+    +red-theme()
+      &:before
+        content: ''
+        +a(0, 0)
+        +size(100%)
+        background-color: transparentize(#000, 0.5)
+        z-index: 1
+        border-radius: 6px
 
   &__bg
     +a(0, 0)
     +size(100%)
     object-fit: cover
-    z-index: -1
     border-radius: 6px
 
   &__title
+    +r()
     +fs(20px)
     +lh(1.1)
     +mb(20px)
+    z-index: 1
     &-highlight
       color: $color-yellow
+      +red-theme()
+        color: $color-red
     &-large
       +fs(150%)
       line-height: 1
@@ -28,6 +41,7 @@
   &__subtitle
     +r()
     max-width: 450px
+    z-index: 1
     +fs(18px)
     +pl(30px)
 
