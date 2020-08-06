@@ -16,13 +16,30 @@
       +r()
       +fs(0)
       +mb(10px)
+
     &-name
       +ff('b')
       +mb(5px)
 
+    &-rating
+      display: flex
+      padding-top: 12px
+      padding-left: 30px
+      +a(0, null, null, 0)
+      +fs(15px)
+      color: $color-general
+      background-image: linear-gradient( 90deg, rgb(255,151,81) 0%, rgb(255,198,0) 100%)
+      +size(265px, 75px)
+      +ff('b')
+      border-radius: 0px 0px 255px 0px / 0px 0px 75px 0px
+
     &-stars
       display: flex
-      +a()
+      +a(null, 15px, 15px)
       svg
         margin-right: 5px
         +size(20px)
+
+  &__footer
+    +min(md)
+      +mt(90px)
