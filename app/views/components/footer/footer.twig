@@ -10,13 +10,36 @@
 </footer>
 
 <div class="modal" id="free-consultation">
-  <div class="modal__box modal__box_default">
+  <div class="modal__box modal__box_form modal__box_form-static">
     <div class="modal__header">
-      <p class="modal__title">Заголовок</p>
       <button class="modal__close" data-close="modal">&times;</button>
     </div>
     <div class="modal__body">
-      <p>Lorem!</p>
+      <form action="" method="POST" class="form">
+        <input type="text" class="form__control" placeholder="Имя" />
+        <input type="tel" class="form__control" placeholder="Телефон" />
+        <input type="email" class="form__control" placeholder="Email" />
+        <button type="submit" class="btn btn_theme btn_theme-black-shadow">
+          Отправить заявку<br>
+          на бесплатную консультацию
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="free-consultation-success">
+  <div class="modal__box modal__box_form modal__box_form-theme">
+    <div class="modal__header">
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__box-info">
+        <div class="modal__box-info-inner">
+          <p class="modal__box-info-title">Заявка принята</p>
+          <p>В ближайшее время<br>с тобой свяжется лидер Команды</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
