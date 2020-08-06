@@ -1,12 +1,21 @@
 .home-greeting
   position: relative
   padding-top: 45px
+
   +min(md)
     +pt(60px)
   &__circle
-    +a(0, 0)
+    @at-root
+      @keyframes greeting-circle
+        from
+          transform: rotate(0deg)
+        100%
+          transform: rotate(360deg)
+    +a(0, -15%)
     +size(250px)
     z-index: -1
+    animation: greeting-circle 45s linear 0s infinite
+    opacity: 0.7
     +min(md)
       +size(800px)
 
@@ -46,6 +55,8 @@
     color: $color-brand-1
     +fs(18px)
     margin-bottom: 30px
+    +red-theme
+      color: #7f7f7f
     &:before
       content: '+'
       +a(50%, null, null, 0)
