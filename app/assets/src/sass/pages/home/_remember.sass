@@ -1,0 +1,44 @@
+=home-remember-position
+  +min(sm)
+    background-position-x: 65%
+  +min(md)
+    background-position-x: 0
+.home-remember
+  +py(60px)
+  color: $color-white
+  +min(sm)
+    +py(90px)
+  +min(lg)
+    +py(130px)
+  +blue-theme
+    +bgi('../img/remember.png', 35% 0)
+    +home-remember-position()
+  +green-theme
+    +bgi('../img/remember.png', 35% 0)
+    +home-remember-position()
+  +red-theme
+    +bgi('../img/remember.png', 35% 0)
+    +home-remember-position()
+
+
+
+  &__content
+    max-width: 450px
+    margin-left: auto
+    +min(sm)
+      margin-right: 90px
+
+  &__title
+    +mb(30px)
+    +ff('b')
+    +blue-theme
+      +c($color-yellow)
+    +green-theme
+      +c($color-yellow)
+
+  &__subtitle
+    +mb(30px)
+    +min(md)
+      +mb(60px)
+    p:not(:last-child)
+      +mb(15px)

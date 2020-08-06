@@ -15,10 +15,12 @@ $btn-font-size: 14px
       font-size: 17px
     span
       text-decoration: underline
-    .blue-theme &
+    +blue-theme()
       background-image: linear-gradient( 90deg, rgb(255,151,81) 0%, rgb(255,198,0) 100%)
       color: #292929
       box-shadow: 0 7px 13px -2px #c0d6f6
+      &-black-shadow
+        box-shadow: 0 7px 13px -2px transparentize($color-black, 0.5)
 
     &:hover
       box-shadow: none
