@@ -42,6 +42,7 @@ $(document).ready(function(){
 		var video = $(this).attr('data-video');
 		var modal = $(this).attr('data-open');
 		$(modal).find('.modal__iframe').attr('src', video);
+
 	});
 
 	$('body').on('click', function(e) {

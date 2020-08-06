@@ -1,2 +1,13 @@
 .footer
-  +fs(12px)
+  +bgc(#222222)
+  +py(15px)
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__logo,
+  &__additional
+    height: 30px
+    +min(md)
+      height: 50px

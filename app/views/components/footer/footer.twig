@@ -1,3 +1,33 @@
+{% import 'macros/landing.twig' as landing %}
+
 <footer class="footer">
-  Footer
+  <div class="container">
+    <div class="footer__row">
+      {{ landing.image('img/footer-logo.png', 'Footer logo', 'footer__logo') }}
+      {{ landing.image('img/footer-logo-additional.png', 'Footer logo additional', 'footer__additional') }}
+    </div>
+  </div>
 </footer>
+
+<div class="modal" id="free-consultation">
+  <div class="modal__box modal__box_default">
+    <div class="modal__header">
+      <p class="modal__title">Заголовок</p>
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <p>Lorem!</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="video">
+  <div class="modal__box modal__box_transparent modal__box_medium">
+    <div class="modal__header">
+      <button class="modal__close" data-close="modal">&times;</button>
+    </div>
+    <div class="modal__body">
+      <iframe frameborder="0" class="modal__iframe"></iframe>
+    </div>
+  </div>
+</div>
