@@ -1,0 +1,12 @@
+.home-teachers
+
+  &__grid
+    display: grid
+    grid-gap: 30px
+    +min(sm)
+      grid-template-columns: repeat(2, 1fr)
+    +min(md)
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 45px
+
+  &__item
