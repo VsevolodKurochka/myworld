@@ -16,7 +16,8 @@
 {% endblock %}
 
 {% block js %}
-{{ macros.js("js/scripts.min.js") }}
+{{ macros.js("js/jquery.min.js") }}
+{{ macros.js("js/jquery.main.js") }}
 {% endblock %}
 
 {% block content %}
@@ -28,7 +29,4 @@
 {% include 'pages/index/section-teachers.twig' with {theme: bodyClass} %}
 {% include 'pages/index/section-connect.twig' with {theme: bodyClass} %}
 {% include 'pages/index/section-remember.twig' with {theme: bodyClass} %}
-{% endblock %}
-
-{% block footer %}
 {% endblock %}
