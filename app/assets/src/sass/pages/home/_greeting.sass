@@ -15,23 +15,30 @@
       +ai(center)
 
   &__title
-    font-size: 35px
+    font-size: 30px
     font-weight: normal
     line-height: 1.1
     margin-bottom: 30px
     +ff('r')
+    max-width: 270px
     span
       +ff('b')
+    +min(sm)
+      max-width: none
     +min(md)
       font-size: 52px
       margin-bottom: 45px
 
   &__logos
     img
-      max-height: 50px
-      margin-right: 25px
-      margin-bottom: 25px
+      max-height: 16px
+      margin-right: 10px
+      margin-bottom: 15px
       vertical-align: middle
+      +min(sm)
+        max-height: 50px
+        margin-right: 25px
+        margin-bottom: 25px
 
   &__plus
     +r()
